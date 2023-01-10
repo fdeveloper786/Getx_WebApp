@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_simple_app/pages/getxobxpage.dart';
+import 'package:getx_simple_app/pages/hide_value_screen.dart';
 import 'package:getx_simple_app/pages/secondpage.dart';
 import 'package:getx_simple_app/pages/snackpage.dart';
 
@@ -91,6 +92,49 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     print('get builder');
                     Get.offAll(GetxObxPage());
+                  },
+                  child: Container(
+                    height: 100,
+                    color: Colors.pink,
+                    padding: const EdgeInsets.all(8.0),
+                    child: Expanded(
+                        child: Center(
+                            child: Text(
+                      'State Management | Getx & Obx',
+                      style: style,
+                    ))),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            // if else statemanagement
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                InkWell(
+                  onTap: () {
+                    print('get obx');
+                    Get.offAll(HideValueScreen());
+                  },
+                  child: Container(
+                    height: 100,
+                    color: Colors.blue,
+                    padding: const EdgeInsets.all(8.0),
+                    child: Expanded(
+                        child: Center(
+                            child: Text(
+                      'State Management | GetX True False',
+                      style: style,
+                    ))),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    print('get builder');
+                    //Get.offAll(GetxObxPage());
                   },
                   child: Container(
                     height: 100,
